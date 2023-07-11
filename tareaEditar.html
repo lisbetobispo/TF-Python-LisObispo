@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PythonBack-Front_AppTareas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <div class="container" id="app">
+        <form action="">
+          <h1 class="display-4 title mt-auto">Modifique Datos de la Tarea</h1>
+          <br />
+          <label for="id">Id: </label
+          ><input disabled type="text" name="id" id="id" v-model="id" />
+          <br /><br />
+          <label for="">Título: </label>
+          <input v-model="titulo" type="text" name="titulo" id="titulo" />
+          <br /><br />
+          <label for="prioridad: ">Prioridad: </label>
+          <input
+            v-model="prioridad"
+            type="number"
+            name="prioridad"
+            id="prioridad"
+          />
+          <br /><br />
+          <label for="imagen">Imagen:</label>
+          <input v-model="imagen" type="text" name="imagen" id="imagen" />
+          <img :src="imagen" :alt="titulo" width="100" />
+
+          <br />
+
+          <br />
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            v-on:click="grabar()"
+          >
+            Guardar
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/tareasEditar.js"></script>
+  </body>
+</html>
